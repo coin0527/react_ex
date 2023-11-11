@@ -1,12 +1,28 @@
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { EffectionEx } from "./components/EffectionEx";
 import { UseEffectEx } from "./components/UseEffectEx";
+import { routes } from "./routes";
+import { Home } from "./pages/Home";
+import { Search } from "./pages/search/Search";
+import { Detail } from "./pages/detail/Detail";
+import { PageNotfound } from "./pages/PageNotfound";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
-      <EffectionEx />
+    <HashRouter>
+      {/* <EffectionEx /> */}
       {/* <UseEffectEx /> */}
-    </div>
+      <Header />
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.search} element={<Search />} />
+        <Route path={routes.detail} element={<Detail />} />
+        <Route path="/*" element={<PageNotfound />} />
+      </Routes>
+      <Footer />
+    </HashRouter>
   );
 };
 
