@@ -6,6 +6,7 @@ const Sheader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 50px 10%;
 `;
 
 const Logo = styled.div`
@@ -19,6 +20,8 @@ const Menu = styled.ul`
   align-items: center;
   li {
     margin-left: 48px;
+    font-size: 24px;
+    font-weight: 600;
   }
 `;
 
