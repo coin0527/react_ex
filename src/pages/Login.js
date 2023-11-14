@@ -1,3 +1,12 @@
+import styled from "styled-components";
+
+const Wrap = styled.div``;
+const LoginWrap = styled.div``;
+
 export const Login = () => {
-  return <div> Login </div>;
+  return (
+    <Wrap>
+      <LoginWrap></LoginWrap>
+    </Wrap>
+  );
 };
