@@ -3,10 +3,15 @@ import { routes } from "../routes";
 import styled from "styled-components";
 
 const Sheader = styled.header`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 10%;
+  padding: 20px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
 `;
 
 const Logo = styled.div`
