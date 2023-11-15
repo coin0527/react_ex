@@ -1,38 +1,6 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { nowPlaying } from "../api";
-
-const Wrap = styled.div`
-  height: 80vh;
-  padding: 400px 5%;
-  h3,
-  p {
-    position: relative;
-  }
-  h3 {
-    font-size: 80px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    letter-spacing: -3px;
-    line-height: 100px;
-  }
-  p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 26px;
-    opacity: 0.8;
-  }
-`;
-const Gradient = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #0f2027;
-  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-`;
+import { Banner } from "./Banner";
 
 export const Home = () => {
   //2. useState
@@ -59,15 +27,7 @@ export const Home = () => {
       {loading ? (
         "loading"
       ) : (
-        <div>
-          {nowPlayingData && (
-            <Wrap>
-              <Gradient />
-              <h3> {nowPlayingData[0].title} </h3>
-              <p> {nowPlayingData[0].overview} </p>
-            </Wrap>
-          )}
-        </div>
+        <div>{nowPlayingData && <Banner data={nowPlayingData[0]} />}</div>
       )}
     </>
   );
