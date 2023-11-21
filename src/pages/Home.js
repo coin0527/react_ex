@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
 import { nowPlaying } from "../api";
 import { Banner } from "./Banner";
-import styled from "styled-components";
-import { ClipLoader } from "react-spinners";
 import { Layout } from "../components/Layout";
 import { ShowMovie } from "./ShowMovie";
-
-const Load = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-`;
+import { LoadingEx } from "../components/LoadingEx";
 
 export const Home = () => {
   //2. useState
@@ -34,17 +26,16 @@ export const Home = () => {
       }
     })();
   }, []);
+
   return (
     <>
       {loading ? (
-        <Load>
-          <ClipLoader color="#84B528" />
-        </Load>
+        <LoadingEx />
       ) : (
         <div>
           {nowPlayingData && <Banner data={nowPlayingData[0]} />}
           <Layout>
-            <ShowMovie />
+            <ShowMovie MovieData={nowPlayingData} TitleName={"상영중인 영화"} />
           </Layout>
         </div>
       )}
