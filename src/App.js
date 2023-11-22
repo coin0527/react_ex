@@ -1,8 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { EffectionEx } from "./components/EffectionEx";
-import { UseEffectEx } from "./components/UseEffectEx";
 import { routes } from "./routes";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/Home/Home";
 import { Search } from "./pages/search/Search";
 import { Detail } from "./pages/detail/Detail";
 import { PageNotfound } from "./pages/PageNotfound";

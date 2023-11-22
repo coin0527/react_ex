@@ -1,13 +1,14 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IMG_URL } from "../constance";
+import { IMG_URL } from "../../constance";
 import "swiper/css";
 
 const Container = styled.section`
   a {
     color: white;
   }
+  margin-bottom: 100px;
 `;
 const Title = styled.h3`
   font-size: 50px;

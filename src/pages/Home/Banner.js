@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IMG_URL } from "../constance";
+import { IMG_URL } from "../../constance";
 
 const Wrap = styled.div`
   height: 80vh;
