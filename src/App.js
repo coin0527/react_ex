@@ -1,27 +1,17 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
-import { routes } from "./routes";
-import { Home } from "./pages/Home/Home";
-import { Search } from "./pages/search/Search";
-import { Detail } from "./pages/detail/Detail";
-import { PageNotfound } from "./pages/PageNotfound";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+//사용
+import React from "react";
+import DropdownMenu from "./DropdownMenu";
 
-const App = () => {
+function App() {
   return (
-    <HashRouter>
-      {/* <EffectionEx /> */}
-      {/* <UseEffectEx /> */}
-      <Header />
-      <Routes>
-        <Route path={routes.home} element={<Home />} />
-        <Route path={routes.search} element={<Search />} />
-        <Route path={routes.detail} element={<Detail />} />
-        <Route path="/*" element={<PageNotfound />} />
-      </Routes>
-      <Footer />
-    </HashRouter>
+    <div>
+      <DropdownMenu buttonText="메뉴">
+        <li>메뉴 항목 1</li>
+        <li>메뉴 항목 2</li>
+        <li>메뉴 항목 3</li>
+      </DropdownMenu>
+    </div>
   );
-};
+}
 
 export default App;
