@@ -7,7 +7,7 @@ const components = {
   Modal,
 };
 
-const _theme = extendTheme({
+const _theme = extendBaseTheme({
   components,
   fonts: {
     heading: `'Noto Sans KR', sans-serif`,
