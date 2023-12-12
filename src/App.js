@@ -1,16 +1,27 @@
 //사용
+import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import React from "react";
-import DropdownMenu from "./DropdownMenu";
 
 function App() {
   return (
-    <div>
-      <DropdownMenu buttonText="메뉴">
-        <li>메뉴 항목 1</li>
-        <li>메뉴 항목 2</li>
-        <li>메뉴 항목 3</li>
-      </DropdownMenu>
-    </div>
+    <HStack>
+      <Box w="300px" h="300px" bgColor="salmon">
+        <Text fontSize="50px" color="white">
+          챠크라 UI
+        </Text>
+        <Button colorScheme="blue">버튼</Button>
+      </Box>
+      <Box w="300px" h="300px" bgColor="salmon">
+        <Text fontSize="50px" color="white">
+          챠크라 UI
+        </Text>
+      </Box>
+      <Box w="300px" h="300px" bgColor="salmon">
+        <Text fontSize="50px" color="white">
+          챠크라 UI
+        </Text>
+      </Box>
+    </HStack>
   );
 }
 
